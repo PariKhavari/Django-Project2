@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'fruit_app/css/stylee.css' %}" />
+
+    <title>fruit App</title>
+  </head>
+
+  <body>
+    {% comment %} {% include 'fruit_app/header.html' %} {% endcomment %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block infos %}
+
+    {% endblock %}
+
+    {% comment %} <h1>
+      {% block page_heading %}
+        Fruchtliste
+      {% endblock %}
+    </h1> {% endcomment %}
+  </body>
+</html>
