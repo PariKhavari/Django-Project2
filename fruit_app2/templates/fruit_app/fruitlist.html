@@ -1,0 +1,50 @@
+{% extends 'fruit_app/base.html' %}
+{% load static %}
+
+    {% block infos %}
+      <a class="header-link", href="fruit_app/info"> mehr Information </a>
+    {% endblock %}
+
+    
+{% block content %}
+  <section id="section">
+    <h1>Obstbestellung im fruit app</h1>
+    <div class="category">
+      <h2>bestellt</h2>
+      <div class="card-container">
+        {% for fruit in fruits %}
+          {% if fruit.is_ordered %}
+            <div class="tech-card">
+              <img src="{% static 'fruit_app/img/' %}{{ fruit.name|lower }}.jpg" alt="{{ fruit.name }}" />
+              <div>
+                <div class="fruit-name">{{ fruit.name }}</div>
+                <div class="fruit-meta">Weight: {{ fruit.weight }} &middot; Color: {{ fruit.color }}</div>
+              </div>
+              <span class="fruit-status">Status: ordered</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="category">
+      <h2>nicht bestellt</h2>
+      <div class="card-container">
+        {% for fruit in fruits %}
+          {% if fruit.is_ordered %}
+            <div class="tech-card">
+              <img src="{% static 'fruit_app/img/' %}{{ fruit.name|lower }}.jpg" alt="{{ fruit.name }}" />
+              <div>
+                <div class="fruit-name">{{ fruit.name }}</div>
+                <div class="fruit-meta">Weight: {{ fruit.weight }} &middot; Color: {{ fruit.color }}</div>
+              </div>
+              <span class="fruit-status">Status: not ordered</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+<br>
+
+

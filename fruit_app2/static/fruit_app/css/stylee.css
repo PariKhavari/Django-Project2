@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(161, 161, 167);
+
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    z-index: 0;
+}
+
+
+h1,
+h2 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+
+#section {
+    position: absolute;
+    position: fixed;
+    text-align: center;
+
+}
+
+.category {
+    margin-bottom: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.tech-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(30% - 40px);
+    text-align: center;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.tech-card img {
+    max-width: 110px;
+
+}
+
+.header-link {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size:x-large;
+    color: rgb(233, 239, 243);
+    background-color: rgb(34, 34, 59);
+    padding: 40px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+    z-index: 2;
+  
+}
+
+.header-link:hover {
+    background-color: rgb(136, 1, 1);
+}

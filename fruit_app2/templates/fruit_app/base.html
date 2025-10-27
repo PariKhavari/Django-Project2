@@ -11,20 +11,20 @@
   </head>
 
   <body>
-    {% comment %} {% include 'fruit_app/header.html' %} {% endcomment %}
-
-    {% block content %}
-
-    {% endblock %}
+    {% include 'fruit_app/header.html' %}
+    <br><br><br>
 
     {% block infos %}
 
     {% endblock %}
 
-    {% comment %} <h1>
-      {% block page_heading %}
-        Fruchtliste
-      {% endblock %}
-    </h1> {% endcomment %}
+    {% block content %}
+
+    {% endblock %}
+
+
+  
+  
+
   </body>
 </html>

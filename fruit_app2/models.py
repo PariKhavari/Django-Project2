@@ -6,3 +6,4 @@ class Fdata(models.Model):
     name = models.CharField(max_length=255)
     weight = models.FloatField(max_length=255)
     color = models.CharField(max_length=255)
+ 
