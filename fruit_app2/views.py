@@ -20,11 +20,12 @@ def send_fruits(request):
             "image": "orange.jpg", "is_ordered": True},
     ]
 
+    if request.method != "GET":
+        raise Http404("Diese Methode ist nicht erlaubt.")
+
     if request.method == "GET":
         return render(request, "fruit_app/fruitlist.html", {"fruits": fruits})
         return JsonResponse(fruits, safe=False)
-
-    raise Http404("fruit not found")
 
 
 def info_fruits(request):

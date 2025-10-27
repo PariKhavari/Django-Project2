@@ -1,11 +1,7 @@
 {% extends 'fruit_app/base.html' %}
 {% load static %}
 
-    {% block infos %}
-      <a class="header-link", href="fruit_app/info"> mehr Information </a>
-    {% endblock %}
 
-    
 {% block content %}
   <section id="section">
     <h1>Obstbestellung im fruit app</h1>
@@ -45,6 +41,9 @@
     </div>
   </section>
 {% endblock %}
-<br>
 
+ {% block infos %}
+       <a class="header-link" href='info'> mehr Information </a>
+
+    {% endblock %}
 
